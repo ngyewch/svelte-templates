@@ -1,0 +1,25 @@
+{
+  "name": "vite-typescript-app",
+  "scripts": {
+    "dev": "vite",
+    "compile": "cross-env NODE_ENV=production vite build",
+    "check": "svelte-check --human && tsc --noEmit",
+    "watch:svelte": "svelte-check --human --watch",
+    "watch:ts": "tsc --noEmit --watch",
+    "start": "run-p watch:* dev",
+    "build": "run-s check compile",
+    "serve": "sirv dist"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.35",
+    "@tsconfig/svelte": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "sirv-cli": "^2.0.2",
+    "svelte": "^3.46.2",
+    "svelte-check": "^2.3.0",
+    "svelte-preprocess": "^4.10.2",
+    "typescript": "^4.5.5",
+    "vite": "^2.7.13"
+  }
+}
